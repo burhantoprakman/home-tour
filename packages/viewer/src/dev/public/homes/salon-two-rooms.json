@@ -1,0 +1,105 @@
+{
+  "_comment": "Dev sample: the two imported Salon rooms side by side (collision x ranges -2.4..2.0 and -3.73..0.95, so B sits at x=5.8). Load with ?home=/homes/salon-two-rooms.json",
+  "floorPlan": {
+    "rooms": [
+      {
+        "roomId": "917d5f69-4229-4d39-aaa1-2caf11252bad",
+        "x": 0,
+        "z": 0,
+        "rotationYaw": 0
+      },
+      {
+        "roomId": "5c91bd13-871f-47dc-9ebf-df88e03352e5",
+        "x": 5.8,
+        "z": 0,
+        "rotationYaw": 0
+      }
+    ],
+    "spawn": {
+      "x": 0,
+      "z": 0,
+      "yaw": 0
+    },
+    "scale": 1
+  },
+  "rooms": [
+    {
+      "id": "917d5f69-4229-4d39-aaa1-2caf11252bad",
+      "homeId": "cb950293-0000-4000-8000-000000000000",
+      "name": "Salon",
+      "status": "ready",
+      "splatUrl": "https://hwcspwzlxarrdsfhvjvz.supabase.co/storage/v1/object/public/room-files/rooms/917d5f69-4229-4d39-aaa1-2caf11252bad/final/room_lod/lod-meta.json",
+      "collisionUrl": "https://hwcspwzlxarrdsfhvjvz.supabase.co/storage/v1/object/public/room-files/rooms/917d5f69-4229-4d39-aaa1-2caf11252bad/final/collision.glb",
+      "seats": [
+        {
+          "id": "seat-1",
+          "position": [-1.581, 0.465, -2.783],
+          "facingYaw": 0.3858,
+          "confirmed": false
+        },
+        {
+          "id": "seat-2",
+          "position": [-1.386, 0.448, -1.918],
+          "facingYaw": -1.6738,
+          "confirmed": false
+        },
+        {
+          "id": "seat-3",
+          "position": [-1.455, 0.448, -1.246],
+          "facingYaw": -1.6738,
+          "confirmed": false
+        },
+        {
+          "id": "seat-4",
+          "position": [-1.525, 0.448, -0.574],
+          "facingYaw": -1.6738,
+          "confirmed": false
+        },
+        {
+          "id": "seat-5",
+          "position": [0.483, 0.418, -2.511],
+          "facingYaw": -3.0606,
+          "confirmed": false
+        },
+        {
+          "id": "seat-6",
+          "position": [-0.353, 0.418, -2.443],
+          "facingYaw": -3.0606,
+          "confirmed": false
+        }
+      ],
+      "transform": {
+        "position": [0, 0, 0],
+        "rotationYaw": 0,
+        "scale": 1
+      }
+    },
+    {
+      "id": "5c91bd13-871f-47dc-9ebf-df88e03352e5",
+      "homeId": "cb950293-0000-4000-8000-000000000000",
+      "name": "Salon (first take)",
+      "status": "ready",
+      "splatUrl": "https://hwcspwzlxarrdsfhvjvz.supabase.co/storage/v1/object/public/room-files/rooms/5c91bd13-871f-47dc-9ebf-df88e03352e5/final/room_lod/lod-meta.json",
+      "collisionUrl": "https://hwcspwzlxarrdsfhvjvz.supabase.co/storage/v1/object/public/room-files/rooms/5c91bd13-871f-47dc-9ebf-df88e03352e5/final/collision.glb",
+      "seats": [
+        {
+          "id": "seat-1",
+          "position": [-3.253, 0.429, 0.721],
+          "facingYaw": -1.4661,
+          "confirmed": false
+        },
+        {
+          "id": "seat-2",
+          "position": [-3.175, 0.429, 1.463],
+          "facingYaw": -1.4661,
+          "confirmed": false
+        }
+      ],
+      "transform": {
+        "position": [0, 0, 0],
+        "rotationYaw": 0,
+        "scale": 1
+      }
+    }
+  ]
+}

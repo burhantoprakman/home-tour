@@ -1,0 +1,42 @@
+name: HomeTourCapture
+options:
+  bundleIdPrefix: com.burhantoprakman.hometour
+  deploymentTarget:
+    iOS: "17.0"
+packages:
+  CaptureCore:
+    path: CaptureCore
+settings:
+  base:
+    DEVELOPMENT_TEAM: U9VUBJUZCJ
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "0.1"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  HomeTourCapture:
+    type: application
+    platform: iOS
+    sources: [HomeTourCapture]
+    dependencies:
+      - package: CaptureCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.burhantoprakman.hometour.capture
+        TARGETED_DEVICE_FAMILY: "1"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Home Tour Capture
+        INFOPLIST_KEY_NSCameraUsageDescription: The camera films your room so Home Tour can turn it into a 3D space friends can visit.
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIRequiredDeviceCapabilities: arkit
+        INFOPLIST_KEY_UIFileSharingEnabled: YES
+        INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+    info:
+      path: HomeTourCapture/Info.plist
+      properties:
+        CFBundleURLTypes:
+          - CFBundleURLName: com.burhantoprakman.hometour.capture.pair
+            CFBundleURLSchemes: [hometour]
+        UIBackgroundModes: []

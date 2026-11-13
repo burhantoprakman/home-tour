@@ -1,0 +1,25 @@
+{
+  "name": "@home-tour/realtime",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "shared": "pnpm --filter @home-tour/shared build",
+    "dev": "pnpm run shared && node --env-file-if-exists=../../.env --watch src/main.ts",
+    "start": "node --env-file-if-exists=../../.env src/main.ts",
+    "test": "pnpm run shared && tsc -p tsconfig.json && vitest run",
+    "loadtest": "node scripts/loadtest.ts"
+  },
+  "dependencies": {
+    "@colyseus/core": "0.18.19",
+    "@colyseus/schema": "5.0.40",
+    "@colyseus/ws-transport": "0.18.4",
+    "@home-tour/shared": "workspace:*",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@colyseus/sdk": "0.18.5",
+    "@types/node": "24.19.2",
+    "vitest": "^5.0.5"
+  }
+}

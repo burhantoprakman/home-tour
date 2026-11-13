@@ -1,0 +1,29 @@
+{
+  "name": "@home-tour/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "shared": "pnpm --filter @home-tour/shared build",
+    "dev": "pnpm run shared && next dev",
+    "build": "pnpm run shared && next build",
+    "start": "next start",
+    "test": "pnpm run shared && tsc -p tsconfig.json --noEmit && vitest run"
+  },
+  "dependencies": {
+    "@home-tour/shared": "workspace:*",
+    "@home-tour/viewer": "workspace:*",
+    "@supabase/supabase-js": "2.118.0",
+    "modal": "0.11.1",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "vitest": "^5.0.5"
+  }
+}

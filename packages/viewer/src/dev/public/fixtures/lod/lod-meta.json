@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "asset": {
+    "generator": "splat-transform v3.10.3",
+    "chunkGaussians": 524288,
+    "chunkExtent": 16,
+    "chunkMinGaussians": 8192
+  },
+  "count": 17051,
+  "counts": [11367, 5684],
+  "lodLevels": 2,
+  "filenames": ["0_0/meta.json", "1_0/meta.json"],
+  "tree": {
+    "bound": { "min": [-3.06, -0.06000008, -3.06], "max": [3.06, 2.56, 3.06] },
+    "lods": {
+      "0": { "file": 0, "offset": 0, "count": 11367 },
+      "1": { "file": 1, "offset": 0, "count": 5684 }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+node_modules
+dist
+.next
+coverage
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.DS_Store
+__pycache__
+.venv
+.pytest_cache
+.supabase
+
+# Supabase CLI link state (project ref, pooler URL)
+supabase/.temp
+
+# Local pipeline outputs, scratch and caches
+.out/
+*_out/
+*.npy
+.ruff_cache
+.mypy_cache
+
+# Xcode / SwiftPM
+build/
+.build/
+.swiftpm/
+xcuserdata/
+DerivedData/
+
+# Editor / OS
+.idea/
+.vscode/
+*.log

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Viewer dev page</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #111;
+        color: #eee;
+        font:
+          13px/1.4 system-ui,
+          sans-serif;
+      }
+      canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+        touch-action: none;
+      }
+      #panel {
+        position: fixed;
+        top: 8px;
+        left: 8px;
+        max-width: min(420px, calc(100vw - 32px));
+        padding: 8px 10px;
+        background: rgb(0 0 0 / 0.6);
+        border-radius: 6px;
+      }
+      #panel a {
+        color: #9cf;
+      }
+      #hud {
+        white-space: pre;
+        font-family: ui-monospace, monospace;
+        margin-top: 6px;
+      }
+      #warn {
+        color: #fc6;
+      }
+      #panel summary {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="app"></canvas>
+    <details id="panel" open>
+      <summary>Viewer dev page</summary>
+      <div>
+        Fixture:
+        <a href="?splat=/fixtures/lod/lod-meta.json&collision=/fixtures/collision.glb"
+          >streamed LOD</a
+        >
+        · <a href="?splat=/fixtures/room.sog&collision=/fixtures/collision.glb">room.sog</a>
+        ·
+        <a href="?splat=/fixtures/lod/lod-meta.json&collision=/fixtures/collision.glb&budget=8000"
+          >streamed, budget 8k</a
+        >
+      </div>
+      <div>
+        Salon:
+        <a
+          href="?splat=https://hwcspwzlxarrdsfhvjvz.supabase.co/storage/v1/object/public/room-files/rooms/917d5f69-4229-4d39-aaa1-2caf11252bad/final/room_lod/lod-meta.json&collision=https://hwcspwzlxarrdsfhvjvz.supabase.co/storage/v1/object/public/room-files/rooms/917d5f69-4229-4d39-aaa1-2caf11252bad/final/collision.glb&seats=all"
+          >one room, all seats</a
+        >
+        · <a href="?home=/homes/salon-two-rooms.json&seats=all">two-room home</a>
+      </div>
+      <div>
+        Click to look · WASD/arrows walk · E sit / stand · C collision mesh · R respawn<br />
+        Phone: left thumb joystick · drag right side to look · tap a ring to sit
+      </div>
+      <div id="warn"></div>
+      <div id="hud"></div>
+    </details>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

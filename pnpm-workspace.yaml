@@ -1,0 +1,9 @@
+packages:
+  - apps/*
+  - packages/*
+
+# Install scripts not needed: optional native speed-ups (cbor-extract, msgpackr-extract), version notice (protobufjs).
+allowBuilds:
+  cbor-extract: false
+  protobufjs: false
+  msgpackr-extract: false

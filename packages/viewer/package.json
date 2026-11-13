@@ -1,0 +1,26 @@
+{
+  "name": "@home-tour/viewer",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "shared": "pnpm --filter @home-tour/shared build",
+    "dev": "pnpm run shared && vite src/dev",
+    "build": "pnpm run shared && tsc -p tsconfig.json && vite build src/dev --outDir ../../dist --emptyOutDir",
+    "test": "pnpm run shared && tsc -p tsconfig.json && vitest run",
+    "fixture": "node scripts/make-fixture.ts && prettier --write src/dev/public/fixtures",
+    "avatars": "node scripts/build-avatars.ts"
+  },
+  "dependencies": {
+    "@colyseus/sdk": "0.18.5",
+    "@home-tour/shared": "workspace:*",
+    "playcanvas": "2.23.3"
+  },
+  "devDependencies": {
+    "vite": "8.3.5",
+    "vitest": "^5.0.5"
+  }
+}
